@@ -158,7 +158,7 @@ Value getrawmempool(const Array& params, bool fHelp)
             "{                           (json object)\n"
             "  \"transactionid\" : {       (json object)\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in litecoins\n"
+            "    \"fee\" : n,              (numeric) transaction fee in hypercoins\n"
             "    \"time\" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -273,8 +273,8 @@ Value getblock(const Array& params, bool fHelp)
             "\nResult (for verbose=false):\n"
             "\"data\"             (string) A string that is serialized, hex-encoded data for block 'hash'.\n"
             "\nExamples:\n"
-            + HelpExampleCli("getblock", "\"0c3b2c31c8aa025e5ae7a87dfe63d1795a061b95e7b00aee61e5384338a26739\"")
-            + HelpExampleRpc("getblock", "\"0c3b2c31c8aa025e5ae7a87dfe63d1795a061b95e7b00aee61e5384338a26739\"")
+            + HelpExampleCli("getblock", "\"511cd6ae9f30c808f2e03bc01685366869d33d49bbdaab3a576c96fbf36b147f\"")
+            + HelpExampleRpc("getblock", "\"511cd6ae9f30c808f2e03bc01685366869d33d49bbdaab3a576c96fbf36b147f\"")
         );
 
     std::string strHash = params[0].get_str();
@@ -362,8 +362,8 @@ Value gettxout(const Array& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of litecoin addresses\n"
-            "        \"litecoinaddress\"     (string) litecoin address\n"
+            "     \"addresses\" : [          (array of string) array of hypercoin addresses\n"
+            "        \"hypercoinaddress\"     (string) hypercoin address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"
